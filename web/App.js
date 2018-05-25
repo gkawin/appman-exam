@@ -2,6 +2,10 @@ import './styles/app.scss'
 
 import React from 'react'
 
+import FormInputContainer from './form/FormInputContainer'
+import FormInput from './form/FormInput'
+import FormButton from './form/FormButton'
+
 class App extends React.Component {
   render () {
     return (
@@ -10,13 +14,15 @@ class App extends React.Component {
           <image src={require('./logo.svg')} />
         </div>
         <div className='app__form'>
-          <div className='form__inputs'>
-            <form>
-              <input type='email' placeholder='example@appman.co.th' />
-              <input type='password' placeholder='you password...' />
-              <button onClick={() => {}}>Sign in</button>
-            </form>
-          </div>
+          <FormInputContainer>
+            {(props) => (
+              <form>
+                <FormInput type='email' placeholder='example@appman.co.th' />
+                <FormInput type='password' placeholder='you password...' />
+                <FormButton onClick={() => {}}>Sign In</FormButton>
+              </form>
+            )}
+          </FormInputContainer>
         </div>
         <div className='form__helpers'>
           <a href='#'>Forgot password?</a>
