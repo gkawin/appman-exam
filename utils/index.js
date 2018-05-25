@@ -1,5 +1,4 @@
 // WARNING: beware object mutable
-
 /**
  * @params {Object} store
  * @params {String} name
@@ -7,7 +6,15 @@
  * @params {Number} scores{key}
  */
 exports.updateStudentScore = (store, { name, scores }) => {
-  // code here
+  const subjects = Object.keys(scores)
+  return subjects.map((subject) => {
+    const storeData = store.find((item) => item.subject === subject)
+    return Object.assign(
+      {},
+      storeData,
+      { students: [...storeData.students, { name, score: scores[subject] }] }
+    )
+  })
 }
 
 /**

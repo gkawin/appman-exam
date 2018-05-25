@@ -12,7 +12,7 @@ const store = [
 ]
 
 describe('update new student score', () => {
-  test('should be update new student correctly', () => {
+  test.only('should be update new student correctly', () => {
     const result = updateStudentScore(store, {
       name: 'sanji',
       scores: {
