@@ -1,5 +1,3 @@
-const _ = require('lodash');
-
 // WARNING: beware object mutable
 
 /**
@@ -9,8 +7,8 @@ const _ = require('lodash');
  * @params {Number} scores{key}
  */
 exports.updateStudentScore = (store, { name, scores }) => {
-    // code here
-};
+  // code here
+}
 
 /**
  * @params {Object} store
@@ -18,12 +16,12 @@ exports.updateStudentScore = (store, { name, scores }) => {
  * @params {String} subject
  */
 exports.removeStudentScoreBySubject = (store, { name, subject }) => {
-    // code here
-};
+  // code here
+}
 
 /**
  * @params {Object} store
  */
 exports.transformData = store => {
-    // code here
-};
+  // code here
+}

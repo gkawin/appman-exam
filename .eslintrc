@@ -12,7 +12,11 @@
         "import",
         "jsx-a11y"
     ],
+    "env": {
+        "jest": true
+    },
     "rules": {
+        "no-console": "warn",
         "react/sort-comp": [ "error", {
             "order": [
               "constructor",
@@ -23,6 +27,10 @@
               "render"
             ]
           } 
-        ]        
+        ],
+        "import/order": [ "error", {
+            "groups": ["builtin", "external", "parent", "sibling", "index"]
+            }
+        ]  
     }
 }
