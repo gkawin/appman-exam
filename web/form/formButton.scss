@@ -1,0 +1,15 @@
+.form-button {
+  width: 100%;
+  text-align: center;
+  &__button {
+    padding: 15px 0;
+    background-color: deepskyblue;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 3px;
+    width: 200px;
+    cursor: pointer;
+  }
+}
