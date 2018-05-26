@@ -11,7 +11,7 @@ const store = [
   }
 ]
 
-describe('update new student score', () => {
+describe.skip('update new student score', () => {
   test('should be update new student correctly', () => {
     const result = updateStudentScore(store, {
       name: 'sanji',
@@ -93,7 +93,7 @@ describe('update new student score', () => {
 })
 
 describe('remove score by student and subject', () => {
-  test.skip('should be remove correct', () => {
+  test('should be remove correct', () => {
     const result = removeStudentScoreBySubject(store, { name: 'luffy', subject: 'math' })
 
     const expected = [
@@ -111,7 +111,7 @@ describe('remove score by student and subject', () => {
   })
 })
 
-describe('transform data by student', () => {
+describe.skip('transform data by student', () => {
   test.skip('should be transform correctly', () => {
     const result = transformData(store)
     const expected = [

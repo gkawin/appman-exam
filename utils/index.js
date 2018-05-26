@@ -40,7 +40,7 @@ exports.updateStudentScore = (store, { name, scores }) => {
       updateStore(storeResult, targetItem, subject, name, scores[subject])
     }
   }
-  return (storeResult)
+  return storeResult
 }
 
 /**
@@ -49,7 +49,13 @@ exports.updateStudentScore = (store, { name, scores }) => {
  * @params {String} subject
  */
 exports.removeStudentScoreBySubject = (store, { name, subject }) => {
-  // code here
+  return store.map((item) => {
+    if (item.subject === subject) {
+      const removedStudent = item.students.filter((std) => std.name !== name)
+      return Object.assign({}, item, { subject: item.subject, students: removedStudent })
+    }
+    return item
+  })
 }
 
 /**
