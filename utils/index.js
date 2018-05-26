@@ -1,6 +1,6 @@
 // WARNING: beware object mutable
 import cloneDeep from 'lodash/cloneDeep'
-import compact from 'lodash/compact'
+import { uniq, compact, merge } from './tools'
 /**
  * @params {Object} store
  * @params {String} name
@@ -62,5 +62,11 @@ exports.removeStudentScoreBySubject = (store, { name, subject }) => {
  * @params {Object} store
  */
 exports.transformData = store => {
-  // code here
+  const students = uniq(merge(store.reduce((acc, item) => {
+    if (!acc) return acc
+    acc.push((item.students.map((std) => std.name)))
+    return acc
+  }, [])))
+
+  console.log(students)
 }

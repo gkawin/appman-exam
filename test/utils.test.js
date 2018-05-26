@@ -92,7 +92,7 @@ describe.skip('update new student score', () => {
   })
 })
 
-describe('remove score by student and subject', () => {
+describe.skip('remove score by student and subject', () => {
   test('should be remove correct', () => {
     const result = removeStudentScoreBySubject(store, { name: 'luffy', subject: 'math' })
 
@@ -111,8 +111,8 @@ describe('remove score by student and subject', () => {
   })
 })
 
-describe.skip('transform data by student', () => {
-  test.skip('should be transform correctly', () => {
+describe('transform data by student', () => {
+  test('should be transform correctly', () => {
     const result = transformData(store)
     const expected = [
       {
