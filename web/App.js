@@ -11,7 +11,7 @@ class App extends React.Component {
     return (
       <div className='app__segment'>
         <div className='app__logo'>
-          <image src={require('./logo.svg')} />
+          <img src={require('./logo.svg')} />
         </div>
         <div className='app__form'>
           <FormInputContainer>

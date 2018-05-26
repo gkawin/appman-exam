@@ -37,7 +37,7 @@ module.exports = {
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg|jpg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loaders: ['url-loader']
+        loaders: ['file-loader']
       },
       {
         test: /\.json$/,
@@ -56,6 +56,7 @@ module.exports = {
     })
   ],
   devServer: {
+    compress: true,
     contentBase: path.join(__dirname, '../dist'),
     open: true
   }
