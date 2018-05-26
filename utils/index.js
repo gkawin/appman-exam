@@ -68,5 +68,13 @@ exports.transformData = store => {
     return acc
   }, [])))
 
-  console.log(students)
+  return students.map((std) => {
+    let subjectScore = {}
+    store.forEach((item) => {
+      subjectScore = Object.assign({}, subjectScore, {
+        [item.subject]: item.students.find((val) => val.name === std).score
+      })
+    })
+    return { name: std, ...subjectScore }
+  })
 }

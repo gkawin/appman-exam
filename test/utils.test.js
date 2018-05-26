@@ -11,7 +11,7 @@ const store = [
   }
 ]
 
-describe.skip('update new student score', () => {
+describe('update new student score', () => {
   test('should be update new student correctly', () => {
     const result = updateStudentScore(store, {
       name: 'sanji',
@@ -92,7 +92,7 @@ describe.skip('update new student score', () => {
   })
 })
 
-describe.skip('remove score by student and subject', () => {
+describe('remove score by student and subject', () => {
   test('should be remove correct', () => {
     const result = removeStudentScoreBySubject(store, { name: 'luffy', subject: 'math' })
 
