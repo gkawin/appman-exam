@@ -1,12 +1,18 @@
 .form-input {
+  line-height: 42px;
   &__input {
-    border: 1px solid black;
+    border: 2px solid lightgray;
     border-radius: 1rem;
     font-size: 18px;
-    padding: 10px;
+    padding: 10px 20px;
     width: 100%;
+    &:focus {
+      border-color: #242526;
+    }
   }
   &__label {
     display: block;
+    font-weight: 200;
+    letter-spacing: 1px;
   }
 }

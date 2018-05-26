@@ -10,10 +10,13 @@
     padding: 20px;
   }
   &__logo {
-    height: 180px;
-    width: 180px;
+    text-align: center;
+    margin-bottom: 15px;
   }
-  &__form {
-    line-height: 42px;
+  &__logo-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
   }
 }
