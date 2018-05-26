@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 export default class FormButton extends React.Component {
   static propTypes = {
-    onClick: PropTypes.func.isRequired,
+    onClick: PropTypes.func,
     children: PropTypes.any
   }
   render () {

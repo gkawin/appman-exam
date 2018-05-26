@@ -1,3 +1,5 @@
+import './helperLink.scss'
+
 import React from 'react'
 import PropTypes from 'prop-types'
 
@@ -11,7 +13,12 @@ export default class HelperLink extends React.Component {
   }
   render () {
     return (
-      <a href={this.props.to}>{this.props.children}</a>
+      <a
+        href={this.props.to}
+        className='helper-link'
+      >
+        {this.props.children}
+      </a>
     )
   }
 }

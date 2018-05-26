@@ -1,0 +1,7 @@
+.helper-link {
+  text-decoration: none;
+  color: deepskyblue;
+  &:hover {
+    text-decoration: underline;
+  }
+}
