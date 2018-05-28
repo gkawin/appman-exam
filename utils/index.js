@@ -7,6 +7,8 @@ import { uniq, compact, merge } from './tools'
  * @params {Object} scores
  * @params {Number} scores{key}
  */
+// NOTE: my opinion, I think it could be better if I refactor code kind of removing the cloneDeep out of this function.
+// The clonedeep function is great. But the huge impact for the performance. It will cache in every nest in the object to the other memory address.
 exports.updateStudentScore = (store, { name, scores }) => {
   const subjects = Object.keys(scores)
   const storeResult = cloneDeep(store)
